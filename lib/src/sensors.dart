@@ -30,6 +30,20 @@ class Sensors {
   /// https://developer.apple.com/documentation/coremotion/cmacceleration
   static const int GYROSCOPE = 4;
 
+  /// Uncalibrated Gyroscope sensor.
+  /// Measures the rotation rate of the device. This sensor returns a 3 axis
+  /// (x, y & z) list of values. Both Android and iOS returns this values in
+  /// radians/second.
+  ///
+  /// Android documentation:
+  ///
+  /// https://developer.android.com/guide/topics/sensors/sensors_motion#sensors-motion-gyro
+  ///
+  /// iOS documentation:
+  ///
+  /// https://developer.apple.com/documentation/coremotion/cmacceleration
+  static const int UNCALIBRATED_GYROSCOPE = 16;
+
   /// Geomagnetic field sensor.
   /// Monitors changes in the earth's magnetic field. This sensor returns a 3
   /// axis (x, y & z) list of values. Both Android and iOS returns this values
