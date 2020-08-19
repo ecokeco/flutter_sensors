@@ -57,7 +57,7 @@ class SensorStreamHandler(private val sensorManager: SensorManager, sensorId: In
 
     override fun onSensorChanged(event: SensorEvent?) {
         val currentTime = Calendar.getInstance()
-        if (event != null && isValidTime(currentTime)) {
+        if (event != null) {
             val data = arrayListOf<Float>()
             event.values.forEach {
                 data.add(it)
