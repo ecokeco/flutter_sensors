@@ -40,9 +40,9 @@ public class AccelerometerStreamHandler : NSObject, FlutterStreamHandler {
             guard let accelerometerData = data else { return }
             let values = accelerometerData.acceleration
             let dataArray = [
-                values.x,
-                values.y,
-                values.z
+                -9.807 * values.x,
+                -9.807 * values.y,
+                -9.807 * values.z
             ]
             SwiftFlutterSensorsPlugin.notify(sensorId: AccelerometerStreamHandler.SENSOR_ID, sensorData: dataArray, eventSink: eventSink)
         })

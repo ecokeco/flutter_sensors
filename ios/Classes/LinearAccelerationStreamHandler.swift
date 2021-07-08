@@ -40,9 +40,9 @@ public class LinearAccelerationStreamHandler : NSObject, FlutterStreamHandler {
             guard let deviceMotion = data else { return }
             let values = deviceMotion.userAcceleration
             let dataArray = [
-                values.x,
-                values.y,
-                values.z
+                -9.807 * values.x,
+                -9.807 * values.y,
+                -9.807 * values.z
             ]
             SwiftFlutterSensorsPlugin.notify(sensorId: LinearAccelerationStreamHandler.SENSOR_ID, sensorData: dataArray, eventSink: eventSink)
         })
